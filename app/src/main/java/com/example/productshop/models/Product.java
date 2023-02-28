@@ -1,4 +1,4 @@
-package com.example.shoppingcart.models;
+package com.example.productshop.models;
 
 import android.widget.ImageView;
 
@@ -76,5 +76,36 @@ public class Product {
                 '}';
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Double.compare(product.getPrice(), getPrice()) == 0 &&
+                isAvailable() == product.isAvailable() &&
+                getId().equals(product.getId()) &&
+                getName().equals(product.getName()) &&
+                getImageUrl().equals(product.getImageUrl());
+    }
+
+    public static DiffUtil.ItemCallback<Product> itemCallback = new DiffUtil.ItemCallback<Product>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull Product oldItem, @NonNull Product newItem) {
+            return oldItem.getId().equals(newItem.getId());
+        }
+
+        @Override
+        public boolean areContentsTheSame(@NonNull Product oldItem, @NonNull Product newItem) {
+            return oldItem.equals(newItem);
+        }
+    };
+
+    @BindingAdapter("android:productImage")
+    public static void loadImage(ImageView imageView, String imageUrl) {
+        Glide.with(imageView)
+                .load(imageUrl)
+                .fitCenter()
+                .into(imageView);
+    }
 }
 
