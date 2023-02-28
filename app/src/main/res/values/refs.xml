@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_home" />
+    <drawable name="ic_product" />
+    <drawable name="ic_cart" />
+    <drawable name="ic_login" />
+    <drawable name="ic_logout" />
+    <drawable name="product_image" />
+</resources>
