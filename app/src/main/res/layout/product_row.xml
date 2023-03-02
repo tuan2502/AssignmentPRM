@@ -6,13 +6,18 @@
         <variable
             name="product"
             type="com.example.productshop.models.Product" />
+        <variable
+            name="productListInterface"
+            type="com.example.productshop.adapters.ProductListAdapter.ProductListInterface" />
 
     </data>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{() -> productListInterface.onItemClick(product)}">
 
         <ImageView
             android:id="@+id/productImageView"
