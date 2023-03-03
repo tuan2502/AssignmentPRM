@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/customer_id_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textFontWeight="1000"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/purple_700"
+        android:text="THÔNG TIN CÁ NHÂN" />
+    <TextView
+        android:id="@+id/order_name_customer_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Nguyễn Minh Trung Hiếu" />
+    <TextView
+        android:id="@+id/order_phone_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textSize="20dp"
+
+        android:text="0987619737" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textFontWeight="1000"
+        android:textSize="20dp"
+        android:textColor="@color/purple_700"
+        android:layout_marginBottom="20dp"
+        android:text="Đơn hàng đã mua gần đây" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:weightSum="15">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="10"
+            android:src="@drawable/may_giat_xiaomi1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:weightSum="15">
+
+            <TextView
+                android:id="@+id/order_id_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đơn hàng: #1038475762s63O4 "
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/order_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="USB 3.1 32G Apacer"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/required_date_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngày đặt: 03/03/2023 "
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/shipped_date_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ngày giao: 06/03/2023"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/price_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="250.000đ"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/order_status_textview"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:text="Đã nhận hàng"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/staff_id_textview"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:text="Xem chi tiết"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
