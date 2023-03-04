@@ -44,7 +44,6 @@ public class ProductListFragment extends Fragment implements ProductListAdapter.
 
         productListAdapter = new ProductListAdapter();
         fragmentProductListBinding.productRecycleView.setAdapter(productListAdapter);
-        fragmentProductListBinding.productRecycleView.addItemDecoration(new DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL));
         fragmentProductListBinding.productRecycleView.addItemDecoration(new DividerItemDecoration(requireContext(), DividerItemDecoration.HORIZONTAL));
 
 
@@ -66,4 +65,5 @@ public class ProductListFragment extends Fragment implements ProductListAdapter.
     public void onItemClick(Product product) {
 
     }
+
 }
